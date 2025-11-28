@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    
+    <title>Photo Resizer 20kb - SSC, UPSC, Govt Form Photo Converter (Free)</title>
+    <meta name="description" content="Best Free Online Photo Resizer for Government Jobs. Convert Photo to 20kb, 50kb, 100kb. Resize Signature for SSC, UPSC, Railways, NEET, PAN Card. Support HEIC, JPG, PNG, WebP.">
+    
+    <meta name="keywords" content="ssc gd photo resizer, upsc signature resize, photo under 20kb, compress image to 50kb, sbi po photo size, railway rrb photo converter, aadhar card photo change, pan card signature resize, passport size photo maker, heic to jpg converter, jpg to pdf 20kb, neet application photo size, gate exam image resizer, ignou assignment photo compressor, reduce image size in kb, online image optimizer, sarkari result photo tool, job application photo editor, bulk image resizer, iphone photo to jpg">
+    
+    <meta name="author" content="JPG Karo India">
+    <meta property="og:title" content="Photo Resizer 20kb - All Govt Forms Supported">
+    <meta property="og:description" content="1-Click Tool to Resize Photos for SSC, UPSC, IBPS. Convert HEIC/WebP to JPG under 50kb instantly.">
+    <link rel="canonical" href="https://20kbphoto.netlify.app/">
+
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%234f46e5%22/><text x=%2250%22 y=%2270%22 font-size=%2250%22 text-anchor=%22middle%22 fill=%22white%22 font-family=%22sans-serif%22 font-weight=%22bold%22>J</text></svg>">
+
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+    <style>
+        /* 💎 ULTRA PREMIUM THEME (Unchanged) */
+        body {
+            font-family: 'Outfit', sans-serif;
+            background-color: #f8fafc;
+            color: #1e293b;
+            min-height: 100vh;
+            overflow-x: hidden;
+            background-image: 
+                radial-gradient(at 0% 0%, rgba(99, 102, 241, 0.05) 0, transparent 50%), 
+                radial-gradient(at 100% 100%, rgba(236, 72, 153, 0.05) 0, transparent 50%);
+        }
+
+        .studio-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+            border: 1px solid rgba(255, 255, 255, 1);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.08);
+            border-radius: 32px;
+        }
+
+        .fade-in { animation: fadeIn 0.6s ease-out; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+        .drop-zone {
+            background: #ffffff;
+            border: 2px dashed #e2e8f0;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            border-radius: 24px;
+            position: relative;
+            overflow: hidden;
+        }
+        .drop-zone:hover {
+            border-color: #6366f1;
+            background: #eef2ff;
+            transform: scale(1.01);
+        }
+        .drop-zone.active {
+            border-color: #6366f1;
+            background: #eef2ff;
+            transform: scale(1.02);
+            box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.2);
+        }
+
+        /* Scrollable Result List for Multiple Files */
+        .result-list {
+            max-height: 300px;
+            overflow-y: auto;
+            padding-right: 5px;
+        }
+        
+        /* Custom Scrollbar */
+        .result-list::-webkit-scrollbar { width: 6px; }
+        .result-list::-webkit-scrollbar-track { background: #f1f5f9; }
+        .result-list::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 10px; }
+
+        .file-card {
+            background: white;
+            border: 1px solid #e2e8f0;
+            border-radius: 16px;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 10px;
+            transition: transform 0.2s;
+        }
+        .file-card:hover { transform: translateY(-2px); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
+
+        .btn-sm {
+            background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+            color: white;
+            padding: 6px 16px;
+            border-radius: 12px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+
+        /* SEO Cloud Styling */
+        .seo-cloud {
+            font-size: 0; /* Hidden from eyes but text exists in DOM */
+            height: 1px;
+            overflow: hidden;
+            color: transparent;
+        }
+    </style>
+</head>
+<body class="flex flex-col items-center justify-start pt-6 px-4 pb-10">
+
+    <header class="flex flex-col items-center gap-3 mb-8 fade-in">
+        <div class="inline-flex items-center gap-2 px-3 py-1 bg-white border border-indigo-100 rounded-full shadow-sm">
+            <span class="relative flex h-2 w-2">
+              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+              <span class="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
+            </span>
+            <span class="text-[10px] font-bold text-indigo-600 tracking-widest uppercase">Bulk Mode Enabled • Free</span>
+        </div>
+
+        <div class="flex items-center gap-3">
+            <div class="w-12 h-12 bg-gradient-to-br from-indigo-600 to-purple-600 rounded-xl flex items-center justify-center shadow-lg text-white font-bold text-2xl">
+                20
+            </div>
+            <h1 class="text-4xl md:text-5xl font-extrabold text-slate-800 tracking-tight">
+                JPG <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-purple-600">Karo</span>
+            </h1>
+        </div>
+        <p class="text-slate-500 text-sm font-medium text-center max-w-sm">
+            Resize Photos for <span class="text-indigo-600 font-bold">SSC, UPSC, Railways</span>. <br> Bulk Convert HEIC/WebP to JPG.
+        </p>
+    </header>
+
+    <main class="w-full max-w-lg studio-card p-6 md:p-10 relative fade-in">
+        
+        <div id="drop-area" class="drop-zone p-10 text-center cursor-pointer group">
+            <div class="mb-4 transition-transform duration-300 group-hover:scale-110">
+                <div class="w-16 h-16 mx-auto bg-indigo-50 rounded-full flex items-center justify-center">
+                    <svg class="w-8 h-8 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                </div>
+            </div>
+            <h3 class="text-xl font-bold text-slate-700">Upload Photos</h3>
+            <p class="text-xs text-slate-400 mt-2">Select Multiple Files (JPG, HEIC, WebP)</p>
+            <input type="file" id="file-input" accept=".heic, .webp, .png, .jpeg, .jpg, .jfif" multiple class="hidden">
+        </div>
+
+        <div id="loading-area" class="hidden text-center py-8">
+            <h3 class="text-lg font-bold text-slate-700 animate-pulse">Processing Files...</h3>
+            <div class="w-full bg-slate-100 rounded-full h-2 mt-4">
+                <div id="progress-bar" class="bg-indigo-600 h-2 rounded-full transition-all duration-300" style="width: 0%"></div>
+            </div>
+            <p id="status-text" class="text-xs text-slate-400 mt-2">Optimizing for Govt Forms...</p>
+        </div>
+
+        <div id="result-area" class="hidden mt-4 fade-in">
+            <div class="flex justify-between items-center mb-4 px-1">
+                <h3 class="font-bold text-slate-700">Ready to Download ✅</h3>
+                <button onclick="resetUI()" class="text-xs text-indigo-600 font-bold hover:underline">Clear All</button>
+            </div>
+            
+            <div id="files-list" class="result-list">
+                </div>
+
+            <div class="mt-6 text-center">
+                <p class="text-[10px] text-slate-400">Files are processed locally. 100% Safe.</p>
+            </div>
+        </div>
+
+    </main>
+
+    <div class="w-full max-w-2xl mt-10 px-4">
+        <h4 class="text-[10px] font-bold text-slate-400 uppercase tracking-widest text-center mb-4 opacity-50">Optimized For</h4>
+        <div class="flex flex-wrap justify-center gap-2 text-[10px] text-slate-400 opacity-60">
+            <span>SSC GD Photo</span> • 
+            <span>UPSC Signature</span> • 
+            <span>IBPS PO Image</span> • 
+            <span>RRB Railway Photo</span> • 
+            <span>NEET Exam Photo</span> • 
+            <span>PAN Card Resize</span> • 
+            <span>Aadhar Update Photo</span> • 
+            <span>Passport Size Maker</span> • 
+            <span>HEIC to JPG</span> • 
+            <span>WebP to JPG</span> • 
+            <span>Compress to 20kb</span> • 
+            <span>Resize to 50kb</span>
+        </div>
+    </div>
+
+    <div class="seo-cloud">
+        Resize image to 20kb, convert photo for ssc cgl, resize signature for bank exam, photo compressor 50kb, jpg converter online free, heic to jpg converter for iphone, webp to jpg for android, reduce image size in kb not mb, bulk photo resizer, passport photo size dimensions in pixels, sbi clerk photo resizer, lic aao photo size, gate exam photo signature resizer.
+    </div>
+
+    <footer class="mt-8 pb-4 text-center">
+        <p class="text-[10px] text-slate-300">© 2025 JPG Karo • Made for Students</p>
+    </footer>
+
+    <script src="https://unpkg.com/heic2any@0.0.4/dist/heic2any.min.js"></script>
+    <script>
+        // 💰 ADSTERRA LINK (Paisa Machine)
+        const adsterraLink = 'https://www.effectivegatecpm.com/muusj7yqaa?key=bd163998de3f94b24f5ad7df60fbc976';
+
+        const dropArea = document.getElementById('drop-area');
+        const fileInput = document.getElementById('file-input');
+        const loadingArea = document.getElementById('loading-area');
+        const resultArea = document.getElementById('result-area');
+        const filesList = document.getElementById('files-list');
+        const progressBar = document.getElementById('progress-bar');
+        const statusText = document.getElementById('status-text');
+
+        // Drag & Drop Listeners
+        ['dragenter', 'dragover'].forEach(evt => {
+            dropArea.addEventListener(evt, (e) => { e.preventDefault(); dropArea.classList.add('active'); });
+        });
+        ['dragleave', 'drop'].forEach(evt => {
+            dropArea.addEventListener(evt, (e) => { e.preventDefault(); dropArea.classList.remove('active'); });
+        });
+
+        // Event Triggers
+        dropArea.addEventListener('drop', (e) => handleBatchFiles(e.dataTransfer.files));
+        dropArea.addEventListener('click', () => fileInput.click());
+        fileInput.addEventListener('change', (e) => handleBatchFiles(e.target.files));
+
+        // 🧠 MAIN LOGIC: Handle Multiple Files
+        async function handleBatchFiles(files) {
+            if (!files || files.length === 0) return;
+
+            // Switch UI
+            dropArea.classList.add('hidden');
+            loadingArea.classList.remove('hidden');
+            filesList.innerHTML = ''; // Clear previous results
+
+            const totalFiles = files.length;
+            let processedCount = 0;
+
+            // Loop through each file
+            for (const file of files) {
+                statusText.innerText = `Processing ${file.name}...`;
+                
+                try {
+                    const blob = await convertSingleFile(file);
+                    addFileToUI(file.name, blob);
+                } catch (err) {
+                    console.error("Skipped file", file.name);
+                }
+
+                // Update Progress
+                processedCount++;
+                progressBar.style.width = `${(processedCount / totalFiles) * 100}%`;
+            }
+
+            // Finish
+            setTimeout(() => {
+                loadingArea.classList.add('hidden');
+                resultArea.classList.remove('hidden');
+                confetti({ particleCount: 100, spread: 70, origin: { y: 0.6 } });
+            }, 500);
+        }
+
+        // Convert Logic (Supports HEIC & Standard)
+        async function convertSingleFile(file) {
+            return new Promise(async (resolve, reject) => {
+                try {
+                    if (file.type === 'image/heic' || file.name.toLowerCase().endsWith('.heic')) {
+                        const blob = await heic2any({ blob: file, toType: "image/jpeg", quality: 0.90 });
+                        resolve(blob);
+                    } else {
+                        const reader = new FileReader();
+                        reader.onload = function(e) {
+                            const img = new Image();
+                            img.onload = function() {
+                                const canvas = document.createElement('canvas');
+                                canvas.width = img.width;
+                                canvas.height = img.height;
+                                const ctx = canvas.getContext('2d');
+                                ctx.fillStyle = '#FFFFFF';
+                                ctx.fillRect(0, 0, canvas.width, canvas.height);
+                                ctx.drawImage(img, 0, 0);
+                                canvas.toBlob((blob) => resolve(blob), 'image/jpeg', 0.90);
+                            }
+                            img.src = e.target.result;
+                        }
+                        reader.readAsDataURL(file);
+                    }
+                } catch (e) { reject(e); }
+            });
+        }
+
+        // Create UI Card for each file
+        function addFileToUI(originalName, blob) {
+            const url = URL.createObjectURL(blob);
+            const cleanName = originalName.split('.')[0] + '_jpgkaro.jpg';
+            const sizeKb = Math.round(blob.size / 1024);
+
+            const div = document.createElement('div');
+            div.className = 'file-card fade-in';
+            div.innerHTML = `
+                <img src="${url}" class="w-10 h-10 rounded object-cover border border-slate-200">
+                <div class="flex-1 overflow-hidden">
+                    <p class="text-xs font-bold text-slate-700 truncate">${cleanName}</p>
+                    <p class="text-[10px] text-green-600 font-medium">Converted • ${sizeKb} KB</p>
+                </div>
+                <button onclick="downloadFile('${url}', '${cleanName}')" class="btn-sm">
+                    ⬇ Save
+                </button>
+            `;
+            filesList.appendChild(div);
+        }
+
+        // Download Handler (Triggers Adsterra)
+        window.downloadFile = (url, name) => {
+            // 1. Open Adsterra (Paisa)
+            if(adsterraLink) window.open(adsterraLink, '_blank');
+
+            // 2. Trigger Download
+            const link = document.createElement('a');
+            link.href = url;
+            link.download = name;
+            link.click();
+        };
+
+        window.resetUI = () => {
+            resultArea.classList.add('hidden');
+            loadingArea.classList.add('hidden');
+            dropArea.classList.remove('hidden');
+            progressBar.style.width = '0%';
+            fileInput.value = '';
+        };
+    </script>
+</body>
+</html>
